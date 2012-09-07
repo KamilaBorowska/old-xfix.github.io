@@ -1,0 +1,25 @@
+---
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title type="html">π ** 6</title>
+    <link href="http://glitchmr.github.com/index.xml" rel="self"/>
+    <link href="http://glitchmr.github.com/"/>
+    <updated>{{ site.time | date_to_xmlschema }}</updated>
+    <id>http://glitchmr.github.com/</id>
+    {% for post in site.posts %}
+    <entry>
+        <title>{{ post.title | xml_escape }}</title>
+        <id>http://glitchmr.github.com{{ post.url }}</id>
+        <summary type="html">
+            {{ post.content | markdownify | xml_escape}}
+        </summary>
+        <updated>{{ post.date | date_to_xmlschema }}</updated>
+        <link type="text/html" href="http://glitchmr.github.com{{ post.url }}"/>
+        <author>
+            <name>Konrad Borowski</name>
+            <email>glitchmr@myopera.com</email>
+        </author>
+    </entry>
+    {% endfor %}
+</feed>
