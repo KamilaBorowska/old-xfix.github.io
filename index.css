@@ -1,7 +1,7 @@
 html  { background: #DDD }
 body  { background: white;
         padding: 0 20px 0 40px;
-        margin: 0 auto;
+        margin: 0 auto 8px;
         width: 800px;
         border: solid #666;
         border-width: 0px 1px 1px;
