@@ -42,7 +42,7 @@ again. If your `perl6` is in correct location you can continue.
 Download panda using following command if you haven't already.
 
 {% highlight bash %}
-https://github.com/tadzik/panda.git
+git clone https://github.com/tadzik/panda.git
 {% endhighlight %}
 
 And run bootstrap script.
