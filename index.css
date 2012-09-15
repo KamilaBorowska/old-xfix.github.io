@@ -10,13 +10,13 @@ h1    { margin: 0 -20px 0 -40px;
         padding: 0 20px;
         background: #EEE;
         border-bottom: 1px solid #888 }
-h2    { background: #F8F8F8;
-        margin: -1px 0 0;
-        position: relative;
-        right: 20px;
-        padding: 5px;
-        font-size: 20px;
+h2, h3, h4 { background: #FBFBFB;
+        margin: -1px -21px 0 20px;
+        padding: 2px 5px;
         border: 1px solid #888 }
+h2    {  background: #F8F8F8;
+         margin-left: -20px;
+         margin-right: 20px }
 .time { float: right;
         position: relative;
         bottom: 26px;
