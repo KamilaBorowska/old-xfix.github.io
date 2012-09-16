@@ -53,8 +53,9 @@ cd panda
 {% endhighlight %}
 
 Congratulations, you have working `panda` now! If you want, add `panda`
-to your path, by modifying $PATH added before to. Of course, modify
-`[panda-bin-path]` and `[bin-path]` with correct paths.
+to your path, by modifying $PATH you have added before. Of course, as
+said before, modify `[panda-bin-path]` and `[bin-path]` with correct
+paths.
 
 {% highlight bash %}
 export PATH="[panda-bin-path]:[bin-path]:$PATH"
