@@ -9,7 +9,7 @@
     <id>http://glitchmr.github.com/</id>
     {% for post in site.posts %}
     <entry>
-        <title>{{ post.title | xml_escape }}</title>
+        <title>{{ post.title | replace:'<code>','`' | replace:'</code>','`' | xml_escape }}</title>
         <id>http://glitchmr.github.com{{ post.url }}</id>
         <summary type="html">
             {{ post.content | markdownify | xml_escape}}
