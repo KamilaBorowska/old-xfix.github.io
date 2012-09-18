@@ -1,6 +1,16 @@
 {% include header.html %}
 {% include post.html   %}
 {{ content }}
-<div id=disqus_thread></div>
-<script src="http://pi6.disqus.com/embed.js" async></script>
+<script>
+// I know that you shouldn't use document.write() because certain
+// people say it breaks standards. But practicality beats purity.
+// And it allows me to put Disqus (which surely breaks standards
+// more than I in browsers with enabled JavaScript).
+document.write(
+    '<div class=disqus><p>To put code, use <code>&lt;pre&gt;&lt;/pre&gt;'
+    + '</code> tags and indent using spaces (you may want to use text '
+    + 'editor for that).<div id=disqus_thread></div>'
+    + '<script src="http://pi6.disqus.com/embed.js" async><\/script>'
+)
+</script>
 {% include footer.html %}
