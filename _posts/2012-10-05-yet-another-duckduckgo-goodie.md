@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: Yet another DuckDuckDuck goodie
 ---
 Lately, I have made yet another plugin for [DuckDuckGo] <!---->(this
