@@ -3,8 +3,8 @@ layout: post
 title:  Travis - add and forget
 ---
 So, you may have heard that Travis is nice build testing service. It
-is - I even use it for JavaScript project. But, guess what will happen
-if somebody uses Travis incorrectly.
+is - I even use it for my JavaScript projects. But, guess what will
+happen if somebody uses Travis incorrectly.
 
 The problem is about one of the most commonly languages made by
 [bad developers][1] for [bad developers][2]. But this article isn't
