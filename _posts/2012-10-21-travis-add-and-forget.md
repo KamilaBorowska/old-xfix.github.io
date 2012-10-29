@@ -44,7 +44,7 @@ define('TRAVIS_CI' , !!getenv('TRAVIS_PHP_VERSION'));
 
 Of course, version below is better. I mean, it's longer so it's
 definitely better. Yeah... is any programmer using `Boolean()` function
-anyways in JavaScript (warning: not `Boolean` constructor - `Boolean`
+anyway in JavaScript (warning: not `Boolean` constructor - `Boolean`
 constructor is something you shouldn't ever use as it's always truthy).
 
 {% highlight php startinline %}
