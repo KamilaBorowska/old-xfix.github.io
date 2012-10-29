@@ -9,7 +9,8 @@ body  { background: white;
 h1    { margin: 0 -20px 0 -40px;
         padding: 0 20px;
         background: #EEE;
-        border-bottom: 1px solid #888 }
+        border-bottom: 1px solid #888;
+        font-style: italic }
 h2, h3, h4 { background: #FBFBFB;
         margin: -1px -21px 0 20px;
         padding: 2px 5px;
