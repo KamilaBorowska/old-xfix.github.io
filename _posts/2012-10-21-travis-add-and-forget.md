@@ -12,7 +12,7 @@ about why this language is bad - we all know it. Technically, I would
 use PHP instead of Brainfuck if I would have choice between PHP and
 Brainfuck, but it would be choice between very bad and worse.
 
-6 months ago, [Davey Shafik] through - everybody uses Travis CI,
+6 months ago, [Davey Shafik] though - everybody uses Travis CI,
 why PHP source code doesn't. He wanted to add Travis CI to his
 projects, but after quick look he noticed he doesn't have test cases
 in his code and he was too lazy to add them. So, why not add Travis
