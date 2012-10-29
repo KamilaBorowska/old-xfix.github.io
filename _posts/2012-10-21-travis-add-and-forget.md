@@ -71,11 +71,7 @@ My solution would be like this:
 define('TRAVIS_CI', isset($_ENV['TRAVIS_PHP_VERSION']));
 {% endhighlight %}
 
-Or even like this:
-
-{% highlight php startinline %}
-const TRAVIS_CI = isset($_ENV['TRAVIS_PHP_VERSION']);
-{% endhighlight %}
+But good design should avoid dynamic constants.
 
 Anyway, Davey Shafik has changed `!!` into `(bool)`... hey, hasn't
 David Soria Parra said him to use `(boolean)`... check. Those PHP
@@ -157,6 +153,30 @@ variables (with the exception for `$_GET`, `$_POST` and `$_SERVER` of
 course). PHP is simply unusable without OOP. But still, I would
 recommend using other langauges. Also, use template engine and prepared
 SQL queries.
+
+### 2012-11-01 update
+The older version of article was mentioning following syntax.
+
+{% highlight php startinline %}
+const TRAVIS_CI = isset($_ENV['TRAVIS_PHP_VERSION']);
+{% endhighlight %}
+
+Turns out that it doesn't work. Why? Because constant value isn't
+constant - it depends on environment variable existing. All you get is
+cryptic syntax error. PHP stupidly uses its grammar to annoy developer,
+even if this syntax would be allowed in other sane languages. For
+example, you cannot do `func()()`, just because grammar forbids that.
+I haven't heard of other language with similar problems.
+
+    PHP Parse error:  syntax error, unexpected 'isset' (T_ISSET)
+
+Instead, the solution should be more like this.
+
+{% highlight php startinline %}
+$travis_ci = isset($_ENV['TRAVIS_PHP_VERSION']);
+{% endhighlight %}
+
+It's not constant. It shouldn't be because it isn't real constant.
 
 [1]: http://use.perl.org/use.perl.org/_Aristotle/journal/33448.html "use Perl: The blind leading the blind"
 [2]: http://me.veekun.com/blog/2012/04/09/php-a-fractal-of-bad-design/ "fuzzy notepad: PHP: a fractal of bad design"
