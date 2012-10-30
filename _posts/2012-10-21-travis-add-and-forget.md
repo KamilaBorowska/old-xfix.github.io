@@ -154,7 +154,7 @@ course). PHP is simply unusable without OOP. But still, I would
 recommend using other langauges. Also, use template engine and prepared
 SQL queries.
 
-### 2012-11-01 update
+### 2012-10-29 update
 The older version of article was mentioning following syntax.
 
 {% highlight php startinline %}
