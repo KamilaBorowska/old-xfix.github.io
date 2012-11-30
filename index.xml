@@ -12,7 +12,7 @@
         <title>{{ post.title | replace:'<code>','`' | replace:'</code>','`' | xml_escape }}</title>
         <id>http://glitchmr.github.com{{ post.url }}</id>
         <summary type="html">
-            {{ post.content | markdownify | replace:'<h3':'<h1' | replace:'<h4','<h2' | replace:'</h3':'</h1' | replace:'</h4':'</h2' | xml_escape }}
+            {{ post.content | markdownify | replace:'<h3':'<h1' | replace:'<h4','<h2' | replace:'</h3':'</h1' | replace:'</h4':'</h2' | xml_escape | replace:"src='":"src='http://glitchmr.github.com/img/" }}
         </summary>
         <updated>{{ post.date | date_to_xmlschema }}</updated>
         <link type="text/html" href="http://glitchmr.github.com{{ post.url }}"/>

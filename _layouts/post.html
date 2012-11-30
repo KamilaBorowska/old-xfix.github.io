@@ -1,6 +1,6 @@
 {% include header.html %}
 {% include post.html   %}
-{{ content | remove:"id='perl_6_specification'" | remove:"id='stdpm6'" | remove:"id='rakudo_perl'" | remove:"id='niecza_perl'" | replace:'</div></p>','</div>' | replace:'</div></p>','</div>' }}
+{{ content | remove:"id='perl_6_specification'" | remove:"id='stdpm6'" | remove:"id='rakudo_perl'" | remove:"id='niecza_perl'" | replace:'</div></p>','</div>' | replace:'</div></p>','</div>' | replace:"src='":"src='img/" }}
 <script>
 // I know that you shouldn't use document.write() because certain
 // people say it breaks standards. But practicality beats purity.
