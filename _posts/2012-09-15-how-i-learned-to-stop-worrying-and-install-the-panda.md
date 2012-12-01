@@ -63,10 +63,10 @@ export PATH="[panda-bin-path]:[bin-path]:$PATH"
 
 ### I have installed `panda` before
 
-Run rebootstrap script.
+Just install `panda` like normal module.
 
 {% highlight bash %}
-./rebootstrap.pl
+panda install panda
 {% endhighlight %}
 
 Wasn't that simple?
