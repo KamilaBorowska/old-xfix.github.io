@@ -22,7 +22,7 @@ multi binary-search ($x, @array, Int $low, Int $high) {
         when Same     { $middle }
     }
 }
-say binary-search 42, [1, 5, 7, 23, 33, 37, 39, 41, 42, 45, 56, 72];
+# say binary-search 42, [1, 5, 7, 23, 33, 37, 39, 41, 42, 45, 56, 72];
 {% endhighlight %}
 
 Trying to run it shows compile time error message. The compile part is
