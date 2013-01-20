@@ -8,10 +8,10 @@ recursion). The bug is that it doesn't work because of two different
 identifiers `binary-search` and `binary_search`.
 
 {% highlight perl %}
-multi binary-search ($x, @array --> Int) {
+multi binary-search ($x, @array) {
     binary_search $x, @array, 0, end @array;
 }
-multi binary-search ($x, @array, Int $low, Int $high --> Int) {
+multi binary-search ($x, @array, Int $low, Int $high) {
     return Int unless $low before $high;
     my Int $middle = ($low + $high) div 2;
 
