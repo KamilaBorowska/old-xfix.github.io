@@ -7,7 +7,7 @@ Rakudo lately got an interesting change. Consider following buggy code
 recursion). The bug is that it doesn't work because of two different
 identifiers `binary-search` and `binary_search`.
 
-<script src="https://gist.github.com/4577858.js">
+<script src = "https://gist.github.com/4577858.js">
 // ASDF why you auto close tags XML style
 </script>
 
