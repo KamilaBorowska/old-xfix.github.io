@@ -8,7 +8,7 @@ recursion). The bug is that it doesn't work because of two different
 identifiers `binary-search` and `binary_search`.
 
 <script>
-document.write("<script src\=\'https://gist.github.com/4577858.js'><\/script>")
+document.write("\x3Cscript src\=\'https://gist.github.com/4577858.js'>\x3C\/script>")
 </script>
 
 Trying to run it shows compile time error message. The compile part is
