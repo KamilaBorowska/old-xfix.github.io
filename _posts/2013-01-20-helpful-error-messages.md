@@ -12,7 +12,7 @@ multi binary-search ($x, @array --> Int) {
     binary_search $x, @array, 0, end @array;
 }
 multi binary-search ($x, @array, Int $low, Int $high --> Int) {
-    return Int unless $low <= $high;
+    return Int unless $low before $high;
     my Int $middle = ($low + $high) div 2;
 
     # In Perl 6, cmp is DWIM comparison, unlike Perl 5
