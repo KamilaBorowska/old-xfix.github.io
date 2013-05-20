@@ -1,6 +1,7 @@
 {% include header.html %}
 {% include post.html   %}
 {{ content | remove:"id='perl_6_specification'" | remove:"id='stdpm6'" | remove:"id='rakudo_perl'" | remove:"id='niecza_perl'" | replace:'</div></p>','</div>' | replace:'</div></p>','</div>' | replace:"src='":"src='img/" }}
+
 <h3>Related posts</h3>
 <ul>
 {% for post in site.related_posts %}
