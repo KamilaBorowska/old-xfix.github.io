@@ -23,10 +23,12 @@ It will make you bash your head against the brick wall (pun intended).
 One of examples of bash code I could have found is this. And trust me,
 it's not the worst thing (thanks, [Wikibooks]).
 
-    # print the powers of two, from 1 to 512:
-    for ((i = 1; i < 1000; i *= 2)); do
-    echo $i
-    done
+{% highlight bash %}
+# print the powers of two, from 1 to 512:
+for ((i = 1; i < 1000; i *= 2)); do
+  echo $i
+done
+{% endhighlight %}
 
 Do you see double parens here? This is really strange math syntax that
 only supports integers. Why double parenthesis? Well, the answer is
@@ -46,10 +48,12 @@ inside. The strange part is `''` in bash doesn't do any processing at
 all, yet `$''` does. Bash also has `$""` syntax, but it doesn't do
 escape processing - instead it uses gettext to translate string inside.
 
-    # Prints 'Hello world.', with new line in middle.
-    echo Hello$'\n'world.
-    # Prints 'Hello\nworld.', literally.
-    echo Hello$"\n"world.
+{% highlight bash %}
+# Prints 'Hello world.', with new line in middle.
+echo Hello$'\n'world.
+# Prints 'Hello\nworld.', literally.
+echo Hello$"\n"world.
+{% endhighlight %}
 
 Consistency in bash is even worse than in languages such as PHP. There
 are many ways to do something, but none of them are obvious. And I mean
