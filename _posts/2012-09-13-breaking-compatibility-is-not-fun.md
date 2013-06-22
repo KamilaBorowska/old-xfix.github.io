@@ -27,29 +27,27 @@ the problem? Technically yes, but...
 
 So, what's wrong with `Digest::SHA`. Well, that was its source.
 
-{% highlight perl %}
-class Digest::SHA:auth<thou>:ver<0.01> {
-    pir::load_bytecode('Digest/sha256.pbc');
+    class Digest::SHA:auth<thou>:ver<0.01> {
+        pir::load_bytecode('Digest/sha256.pbc');
 
-    multi method sha256_hex (Str $str) {
-        my $sha256_hex = Q:PIR {
-            .local pmc f, g, str
-            str = find_lex '$str'
-            f = get_root_global ['parrot'; 'Digest'], '_sha256sum'
-            $P1 = f(str)
-            g = get_root_global ['parrot'; 'Digest'], '_sha256_hex'
-            $S0 = g($P1)
-            %r = box $S0
-        };
+        multi method sha256_hex (Str $str) {
+            my $sha256_hex = Q:PIR {
+                .local pmc f, g, str
+                str = find_lex '$str'
+                f = get_root_global ['parrot'; 'Digest'], '_sha256sum'
+                $P1 = f(str)
+                g = get_root_global ['parrot'; 'Digest'], '_sha256_hex'
+                $S0 = g($P1)
+                %r = box $S0
+            };
 
-        return $sha256_hex;
+            return $sha256_hex;
+        }
+
+        multi method sha256_hex (@strs) {
+            return self.sha256_hex(@strs.join(""));
+        }
     }
-
-    multi method sha256_hex (@strs) {
-        return self.sha256_hex(@strs.join(""));
-    }
-}
-{% endhighlight %}
 
 As you can notice, it depends on `Digest/sha256.pbc` from Parrot.
 Because of that, this module is Rakudo specific, but in this case it
