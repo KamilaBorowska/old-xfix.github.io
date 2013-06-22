@@ -36,6 +36,14 @@ a     { text-decoration: none }
 .footer p {
         margin: 10px 0 0;
 }
+.tex sub {
+    vertical-align: -0.5ex;
+    margin-left: -0.1667em;
+    margin-right: -0.125em;
+}
+.tex, .tex sub {
+    font-size: 1em;
+}
 .highlight .hll { background-color: #ffffcc }
 .highlight .c { color: #228B22 }
 .highlight .err { color: #a61717; background-color: #e3d2d2 }
