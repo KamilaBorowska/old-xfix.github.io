@@ -40,6 +40,7 @@ a     { text-decoration: none }
     vertical-align: -0.5ex;
     margin-left: -0.1667em;
     margin-right: -0.125em;
+    text-transform: uppercase;
 }
 .tex, .tex sub {
     font-size: 1em;
