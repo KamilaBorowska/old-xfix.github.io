@@ -16,7 +16,7 @@ Cannot locale page<script>
         <a href="/">go to the main page</a>
 <script>
     document.writeln('        <a href="https://duckduckgo.com/?q=site%3Aglitchmr.github.io%20' +
-        encodeURIComponent(location.pathname.replace(/\.html$/, "")
+        encodeURIComponent(decodeURIComponent(location.pathname).replace(/\.html$/, "")
             .replace(/\W/g, " ").replace(/\s+/g, " ")
             .replace(/^\s+|\s+$/g, "")) +
         '">or search for the page</a>')
