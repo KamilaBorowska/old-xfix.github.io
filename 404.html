@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<meta charset=utf-8>
+<title>Cannot locate page</title>
+<style>
+body { background: black; color: white }
+.red { color: rgb(205, 0, 0) }
+.yellow { color: rgb(205, 205, 0) }
+.green { color: rgb(0, 205, 0) }
+a { color: rgb(92, 92, 255) }
+pre { word-wrap: break-word; white-space: pre-wrap }
+</style>
+<pre><span class="red">===</span>SORRY!<span class="red">===</span>
+Cannot locale page<script>
+    document.write(' ' + location.pathname)
+</script>; try one the following operations:
+        <a href="/">go to main page</a>
+<script>
+    document.writeln('        <a href="https://duckduckgo.com/?q=site%3Aglitchmr.github.io%20' +
+        encodeURIComponent(location.pathname.replace(/\.html$/, "")
+            .replace(/\W/g, " ").replace(/\s+/g, " ")
+            .replace(/^\s+|\s+$/g, "")) +
+        '">or search for the page</a>')
+</script>
+at - line 1:
+------> <span class="green">GET <script>
+    document.write(location.pathname)
+</script></span><span class="yellow">⏏</span><span class="red"><script>
+    document.write(location.search)
+</script> HTTP/1.1</span>
+</pre>
