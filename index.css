@@ -23,6 +23,10 @@ body {
     padding-top: 0px;
 }
 
+a {
+    text-decoration: none;
+}
+
 header, article, footer {
     display: block;
 }
@@ -87,14 +91,14 @@ nav li a {
 }
 
 .selected {
-    background: linear-gradient(rgba(0, 0, 0, 0) 90%, rgb(165, 242, 165) 90%);
-    background: -webkit-linear-gradient(rgba(1, 0, 0, 0) 90%, rgb(165, 242, 165) 90%);
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.0125) 90%, rgb(165, 242, 165) 90%);
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.0125) 90%, rgb(165, 242, 165) 90%);
     cursor: default;
     padding-left: 8px;
     padding-right: 8px;
 }
 
-article, footer {
+article {
     border-color: hsl(0, 0%, 80%);
     padding-top: 1em;
     padding-bottom: 1em;
@@ -121,7 +125,7 @@ article header {
     margin-bottom: 0.5em;
 }
 
-article header h1 a {
+article header a {
     color: #000;
     font-weight: lighter;
 }
@@ -152,6 +156,16 @@ article:nth-child(6n + 5) header {
 
 article:nth-last-child(4) {
     padding-bottom: 1.25em;
+}
+
+footer {
+    background: hsl(30, 75%, 95%);
+    border-color: hsl(30, 75%, 80%);
+    box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.125);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    font-size: 80%;
+    color: rgba(0, 0, 0, 0.75);
 }
 
 footer p {
