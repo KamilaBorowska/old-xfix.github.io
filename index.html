@@ -11,7 +11,7 @@ layout: default
     {% if count == paginator.page %}
         <li class=selected> {{ paginator.total_pages | minus:count }}
     {% elsif count == 1 %}
-        <li> <a href="/">{{ paginator.total_pages }}</a>
+        <li> <a href="/">{{ paginator.total_pages | minus:1 }}</a>
     {% else %}
         <li> <a href="/page{{ count }}">{{ paginator.total_pages | minus:count }}</a>
     {% endif %}
