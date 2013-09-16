@@ -121,7 +121,7 @@ article header {
     margin-bottom: 0.5em;
 }
 
-article header a {
+article header a h1 {
     color: #000;
     font-weight: lighter;
 }
