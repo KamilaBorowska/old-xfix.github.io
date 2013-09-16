@@ -1,2 +1,8 @@
-<a href="{{page.url}}"><h2>{{ page.title }}</h2></a>
-<div class=time>{{ page.date | date:"%Y-%m-%d" }}</div>
+<article>
+<header>
+<a href="{{page.url}}"><h1>{{ page.title }}</h1></a>
+<div class=meta>
+<p><time>{{ page.date | date:"%Y-%m-%d" }}</time>
+<p><a href="{{page.url}}#disqus_thread">Post a comment</a>
+</div>
+</header>

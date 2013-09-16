@@ -1,7 +1,27 @@
 ---
 layout: default
 ---
-{% for page in site.posts %}
-{% include post.html %}
-{{ page.content | markdownify | remove:"id='deprecations'" | remove:"id='new_features'" | remove:"id='incompatible_changes'" | remove:"id='perl_6_specification'" | remove:"id='stdpm6'" | remove:"id='rakudo_perl'" | remove:"id='niecza_perl'" | replace:'</div></p>','</div>' | replace:'</div></p>','</div>' | replace:"src='","src='img/" }}
+<header>
+<a href='/'>
+<h1>&pi;<sup>6</sup></h1>
+</a>
+<nav>
+<ul>
+{% for count in (1..paginator.total_pages) %}
+    {% if count == paginator.page %}
+        <li class=selected> {{ paginator.total_pages | minus:count }}
+    {% elsif count == 1 %}
+        <li> <a href="/">{{ paginator.total_pages }}</a>
+    {% else %}
+        <li> <a href="/page{{ count }}">{{ paginator.total_pages | minus:count }}</a>
+    {% endif %}
 {% endfor %}
+</ul>
+</nav>
+</header>
+{% for page in paginator.posts %}
+{% include post.html %}
+{{ page.content | markdownify | remove:"id='deprecations'" | remove:"id='new_features'" | remove:"id='incompatible_changes'" | remove:"id='perl_6_specification'" | remove:"id='stdpm6'" | remove:"id='rakudo_perl'" | remove:"id='niecza_perl'" | replace:'</div></p>','</div>' | replace:'</div></p>','</div>' | replace:"src='","src='img/" | replace:'<h3','<h1' | replace:'<h4','<h2' | replace:'</h3','</h1' | replace:'</h4','</h2' }}
+</article>
+{% endfor %}
+<script src="//pi6.disqus.com/count.js" async></script>
