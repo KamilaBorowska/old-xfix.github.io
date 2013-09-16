@@ -4,7 +4,7 @@ title:  2.0
 ---
 Unless you are viewing my website from [Planet Six](http://planetsix.perl.org/),
 you most likely noticed I've refreshed the layout of this website. Well,
-the reason why I decided to go with this update, is that [it's been a week
+the reason why I decided to go with this update, is that [it's been a year
 since first Perl&nbsp;6 changes article](http://glitchmr.github.io/perl-6-changes-2012W37.html).
 It was exactly a year since I started Perl&nbsp;6 changes series.
 
