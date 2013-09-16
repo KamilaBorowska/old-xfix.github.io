@@ -28,3 +28,7 @@ size.
 
 So, yeah, coming tomorrow, the article about `MAIN` subroutine, just to
 avoid constantly writing the same articles. Enjoy.
+
+Edit: [Nikolaj64](https://github.com/Nikolaj64) decided to improve my
+layout (not that surprising, I'm not a designer). I'm sure it looks
+better now. Thanks for help.
