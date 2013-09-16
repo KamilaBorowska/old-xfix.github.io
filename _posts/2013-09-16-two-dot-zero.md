@@ -6,9 +6,7 @@ Unless you are viewing my website from [Planet Six](http://planetsix.perl.org/),
 you most likely noticed I've refreshed the layout of this website. Well,
 the reason why I decided to go with this update, is that [it's a week
 since first Perl&nbsp;6 changes article](http://glitchmr.github.io/perl-6-changes-2012W37.html).
-It was exactly a year I was counting in previous three posts (I actually
-have done some mistake in counting by accident, I once had two duplicate
-2013W35 articles, but this issue should be fixed now.
+It was exactly a year since I started Perl&nbsp;6 changes series.
 
 The new layout introduces pagination, the feature I was too lazy to ever
 implement. The pages were getting bigger, and it probably wasn't good
