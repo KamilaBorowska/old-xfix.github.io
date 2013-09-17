@@ -216,6 +216,4 @@ following usage.
 And that's all for now. There are still some interesting things (for
 example, you can use postfix `!` on variable in order to make named
 parameter mandatory). You can also read more in [the Perl 6
-specification](http://perlcabal.org/syn/S06.html#Declaring_a_MAIN_subroutine),
-althrough some things aren't implemented in Rakudo for now (like
-`:f(:$frompart)` syntax for aliasing).
+specification](http://perlcabal.org/syn/S06.html#Declaring_a_MAIN_subroutine).
