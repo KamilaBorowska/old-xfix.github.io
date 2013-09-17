@@ -2,7 +2,7 @@
 layout: post
 title:  The MAIN subroutine in Perl 6
 ---
-Because of one year year of making Perl 6 changes articles, I decided
+Because of one year of making Perl 6 changes articles, I decided
 to start a small series involving various tricks in Perl 6. As I said
 before, the first article will be about `MAIN` function, surprisingly
 very useful, even for small programs, because of its behavior.
