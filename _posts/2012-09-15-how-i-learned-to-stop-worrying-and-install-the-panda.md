@@ -16,9 +16,7 @@ What you have to do depends on whatever you have installed panda before
 
 Well, this is rather common. First, run following shell command.
 
-{% highlight bash %}
-which perl6
-{% endhighlight %}
+    which perl6
 
 It will tell you what perl6 will be used. If it says location in home
 directory, you should be fine. But if it says stuff like `/bin/perl6`
@@ -32,41 +30,31 @@ So, you want to fix. Let's assume your shell is either `bash` or `zsh`
 following line at end, where `[bin-path]` should be replaced with your
 path to Rakudo's /bin directory (on my system it's `~/rakudo/bin`).
 
-{% highlight bash %}
-export PATH="[bin-path]:$PATH"
-{% endhighlight %}
+    export PATH="[bin-path]:$PATH"
 
 Close your shell and run it again. Just to be sure, run `which perl6`
 again. If your `perl6` is in correct location you can continue.
 
 Download panda using following command if you haven't already.
 
-{% highlight bash %}
-git clone https://github.com/tadzik/panda.git
-{% endhighlight %}
+    git clone https://github.com/tadzik/panda.git
 
 And run bootstrap script.
 
-{% highlight bash %}
-cd panda
-./bootstrap.pl
-{% endhighlight %}
+    cd panda
+    ./bootstrap.pl
 
 Congratulations, you have working `panda` now! If you want, add `panda`
 to your path, by modifying $PATH you have added before. Of course, as
 said before, modify `[panda-bin-path]` and `[bin-path]` with correct
 paths.
 
-{% highlight bash %}
-export PATH="[panda-bin-path]:[bin-path]:$PATH"
-{% endhighlight %}
+    export PATH="[panda-bin-path]:[bin-path]:$PATH"
 
 ### I have installed `panda` before
 
 Just install `panda` like normal module.
 
-{% highlight bash %}
-panda install panda
-{% endhighlight %}
+    panda install panda
 
 Wasn't that simple?

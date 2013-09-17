@@ -38,25 +38,19 @@ After general "awesome" comments (seriously, do you know other words?)
 the code review started. For example, [David Soria Parra] complained
 about `!!` usage
 
-{% highlight php startinline %}
-define('TRAVIS_CI' , !!getenv('TRAVIS_PHP_VERSION'));
-{% endhighlight %}
+    define('TRAVIS_CI' , !!getenv('TRAVIS_PHP_VERSION'));
 
 Of course, version below is better. I mean, it's longer so it's
 definitely better. Yeah... is any programmer using `Boolean()` function
 anyway in JavaScript (warning: not `Boolean` constructor - `Boolean`
 constructor is something you shouldn't ever use as it's always truthy).
 
-{% highlight php startinline %}
-define('TRAVIS_CI', (boolean) getenv('TRAVIS_PHP_VERSION'));
-{% endhighlight %}
+    define('TRAVIS_CI', (boolean) getenv('TRAVIS_PHP_VERSION'));
 
 I've decided to look for explicit booleans. So, I made a search query
 and I've found [answer on Stack Overflow].
 
-{% highlight php startinline %}
-$test_mode_mail = $string == 'true'? true: false;
-{% endhighlight %}
+    $test_mode_mail = $string == 'true'? true: false;
 
 I seriously don't know what to think about this. It got 8 upvotes. It
 works - but it would be seriously stupid code in any language that
@@ -67,9 +61,7 @@ instead of `===`, it doesn't really matter in this case.
 
 My solution would be like this:
 
-{% highlight php startinline %}
-define('TRAVIS_CI', isset($_ENV['TRAVIS_PHP_VERSION']));
-{% endhighlight %}
+    define('TRAVIS_CI', isset($_ENV['TRAVIS_PHP_VERSION']));
 
 But good design should avoid dynamic constants.
 
@@ -92,14 +84,12 @@ After some time, David Soria Parra has decided to
 
 What went wrong? Well...
 
-{% highlight yaml %}
-notifications:
-    email:
-        recipients:
-            - php-qa@lists.php.net
-        on_success: change # [always|never|change] default: change
-        on_failure: always # [always|never|change] default: always
-{% endhighlight %}
+    notifications:
+        email:
+            recipients:
+                - php-qa@lists.php.net
+            on_success: change # [always|never|change] default: change
+            on_failure: always # [always|never|change] default: always
 
 But... PHP always fails - so PHP Quality Assurance would get lots of
 useless messages. Well, the solution for PHP developers wasn't to fix
@@ -107,14 +97,12 @@ PHP issues, definitely not - that would be too clever for programmers
 that work on PHP. The fix for developers was to
 [disable e-mail notifications].
 
-{% highlight yaml %}
-notifications:
-    email:
-        recipients:
-            - php-qa@lists.php.net
-        on_success: never # [always|never|change] default: change
-        on_failure: never # [always|never|change] default: always
-{% endhighlight %}
+    notifications:
+        email:
+            recipients:
+                - php-qa@lists.php.net
+            on_success: never # [always|never|change] default: change
+            on_failure: never # [always|never|change] default: always
 
 Now, I wonder why simply didn't removed `notifications:` section. I
 mean, they gave e-mail and told Travis - whatever happens, don't
@@ -123,10 +111,8 @@ e-mail. I'm going to call this [brillant].
 After some time, David Soria Parra has noticed that he doesn't have
 to give e-mail to PHP Quality Assurance. So, he [removed it].
 
-{% highlight yaml %}
-notifications:
-    email: false
-{% endhighlight %}
+    notifications:
+        email: false
 
 Now I wonder why he didn't removed whole section. He doesn't want
 any notifications, so why have this section? So now, Travis CI does
@@ -157,9 +143,7 @@ SQL queries.
 ### 2012-10-29 update
 The older version of article was mentioning following syntax.
 
-{% highlight php startinline %}
-const TRAVIS_CI = isset($_ENV['TRAVIS_PHP_VERSION']);
-{% endhighlight %}
+    const TRAVIS_CI = isset($_ENV['TRAVIS_PHP_VERSION']);
 
 Turns out that it doesn't work. Why? Because constant value isn't
 constant - it depends on environment variable existing. All you get is
@@ -172,9 +156,7 @@ I haven't heard of other language with similar problems.
 
 Instead, the solution should be more like this.
 
-{% highlight php startinline %}
-$travis_ci = isset($_ENV['TRAVIS_PHP_VERSION']);
-{% endhighlight %}
+    $travis_ci = isset($_ENV['TRAVIS_PHP_VERSION']);
 
 It's not constant. It shouldn't be because it isn't real constant.
 
