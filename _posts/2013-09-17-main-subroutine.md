@@ -8,7 +8,7 @@ before, the first article will be about `MAIN` function, surprisingly
 very useful, even for small programs, because of its behavior.
 
 First, some historical (sort of) background. In languages like C, Go or
-Java, every program has start with [`main`
+Java, every program has to start with the [`main`
 function](https://en.wikipedia.org/wiki/Main_function).
 
     #include <stdio.h>
