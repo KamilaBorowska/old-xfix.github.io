@@ -209,3 +209,27 @@ article header p {
 .tex, .tex sub {
     font-size: 1em;
 }
+
+pre, code {
+    background: rgb(230, 230, 230);
+    padding: 4px;
+}
+
+code {
+    padding: 2px;
+}
+
+pre code {
+    padding: 0;
+}
+
+/* Fix syntax highlighter (!important hax) */
+a code * {
+    color: inherit !important;
+}
+
+/* To avoid link confusion, use Kate color for keywords */
+.prettyprint .kwd {
+    color: black;
+    font-weight: bold;
+}

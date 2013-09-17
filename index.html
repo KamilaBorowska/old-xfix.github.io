@@ -21,7 +21,7 @@ layout: default
 </header>
 {% for page in paginator.posts %}
 {% include post.html %}
-{{ page.content | markdownify | remove:"id='deprecations'" | remove:"id='new_features'" | remove:"id='incompatible_changes'" | remove:"id='perl_6_specification'" | remove:"id='stdpm6'" | remove:"id='rakudo_perl'" | remove:"id='niecza_perl'" | replace:'</div></p>','</div>' | replace:'</div></p>','</div>' | replace:"src='","src='img/" | replace:'<h3','<h1' | replace:'<h4','<h2' | replace:'</h3','</h1' | replace:'</h4','</h2' }}
+{{ page.content | markdownify | remove:"id='deprecations'" | remove:"id='new_features'" | remove:"id='incompatible_changes'" | remove:"id='perl_6_specification'" | remove:"id='stdpm6'" | remove:"id='rakudo_perl'" | remove:"id='niecza_perl'" | replace:'</div></p>','</div>' | replace:'</div></p>','</div>' | replace:"src='","src='img/" | replace:'<h3','<h1' | replace:'<h4','<h2' | replace:'</h3','</h1' | replace:'</h4','</h2' | replace:'<code','<code class="prettyprint"'  }}
 </article>
 {% endfor %}
 <script src="//pi6.disqus.com/count.js" async></script>
