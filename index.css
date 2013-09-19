@@ -213,6 +213,8 @@ article header p {
 pre, code {
     background: rgb(230, 230, 230);
     padding: 4px;
+    word-wrap: break-word;
+    white-space: pre-wrap;
 }
 
 code {
